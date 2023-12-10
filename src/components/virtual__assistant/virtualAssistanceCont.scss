@@ -1,0 +1,72 @@
+$chatBoxColor : #46B8C8;
+
+/*Fix the center of the heading along the chat box buttons so they are responsive and centered */
+
+.solving__prob__container{
+    width: 100%;
+    max-width: 100%;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    
+    .chat__box{
+        position: absolute;
+        width: 20rem;
+        height: 3.5rem;
+        top: 13%;
+        right: 16%;
+        background-color: $chatBoxColor;
+        border-bottom-left-radius: 50px;
+        border-top-right-radius: 50px;
+        border-top-left-radius: 50px;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        p{
+            width: 80%;
+            height: 100%;
+            display: flex;
+            align-items: flex-end;
+            
+            font-size: 0.8rem;
+            font-weight: normal;
+        }
+    }
+}
+
+.text__VA__container{
+    width: 55%;
+    max-width: 60%;
+    height: 100%;
+    max-height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+
+.virtual__assistance__container{
+    width: 25%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    position: relative;
+    
+
+    p{
+        position: absolute;
+        top: 20%;
+        right: 0;
+    }
+
+    img{
+        width: 30%;   
+    }
+}

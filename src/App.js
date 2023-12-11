@@ -5,6 +5,7 @@ import Navbar from './components/navbar/navbar';
 import SolvingProblems from './components/virtual__assistant/virtualAssistanceCont';
 import CoreValues from './components/core__values/coreValues';
 import GridExample from './components/our__works/ourWork';
+import WeAreHiringContainer from './components/hiring/hiring';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <SolvingProblems />
       <CoreValues />
       <GridExample />
+      <WeAreHiringContainer />
     </div>
   );
 };

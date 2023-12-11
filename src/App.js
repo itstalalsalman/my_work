@@ -3,6 +3,8 @@ import AboutUs from './components/AboutUs/aboutUs';
 import MainLoad from './components/main__load/mainLoad';
 import Navbar from './components/navbar/navbar';
 import SolvingProblems from './components/virtual__assistant/virtualAssistanceCont';
+import CoreValues from './components/core__values/coreValues';
+import GridExample from './components/our__works/ourWork';
 
 function App() {
   return (
@@ -11,6 +13,8 @@ function App() {
       <MainLoad />
       <AboutUs />
       <SolvingProblems />
+      <CoreValues />
+      <GridExample />
     </div>
   );
 };

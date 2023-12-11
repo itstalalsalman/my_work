@@ -1,0 +1,115 @@
+.our__work__container{
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5vh;
+
+    h1{
+        width: 80%;
+        height: 15vh;
+        text-align: center;
+        padding-top: 5%;
+    }
+
+    .our__works__grid{
+        width: 80%;
+        max-width: 80%;
+        height: 150vh;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        gap: 3%;
+        padding: 1%;
+
+        div{
+            width: 100%;
+            max-width: 100%;
+            height: 100%;
+            max-height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 5%;
+            box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.1); /* Adjust the values for your desired shadow */
+            border-radius: 20px;
+
+            h5{
+                font-size: 2.2rem;
+            }
+
+            p{
+                font-size: 1rem;
+                font-weight: normal;
+                width: 53%;
+                height: 15%;
+                max-height: 15%;
+                text-align: center;
+            }
+
+            img{
+                width: 60%;
+            }
+
+            button{
+                width: 16%;
+                max-width: 16%;
+                height: 7%;
+                max-height: 7%;
+                background-color: white;
+                color: #46B8C8;
+                border: 1px solid #46B8C8;
+                border-radius: 50px;
+                font-weight: bold;
+
+
+                &:hover{
+                    background-color: #46B8C8;
+                    color: white;
+                    animation: opacityInc 0.5s forwards;
+                }
+
+                @keyframes opacityInc {
+                    0%{
+                        opacity: 0;
+                    }100%{
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+
+    .moto__container{
+        width: 100%;
+        max-width: 100%;
+        height: 50vh;
+        max-height: 50vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2%;
+
+        img{
+            width: 4%;
+        }
+
+        p{
+            color: orange;
+            width: 50%;
+            height: 100%;
+            font-size: 2.6rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bolder;
+            text-align: center;
+            line-height: 50px;
+        }
+
+
+    }
+}

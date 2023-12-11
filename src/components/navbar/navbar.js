@@ -1,7 +1,6 @@
 import React from "react";
 import './navbar.scss';
 import $ from "jquery";
-import { alert, buttons, jumbotron } from 'bootstrap-css';
 
 
 

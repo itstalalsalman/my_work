@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import './mainLoad.scss';
 import $ from "jquery";
 

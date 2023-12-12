@@ -39,6 +39,21 @@
 
     }
 
+    button{
+        width: 10rem;
+        height: 3rem;
+        background-color: #46B8C8;
+        border: 1px solid #46B8C8;
+        color: white;
+        transition: background-color 0.2s ease-in;
+        border-radius: 50px;
+        font-weight: 600;
+        
+        &:hover{
+            background-color: white;
+            color: #46B8C8;
+        }
+    }
     
 }
 

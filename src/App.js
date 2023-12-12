@@ -6,6 +6,7 @@ import SolvingProblems from './components/virtual__assistant/virtualAssistanceCo
 import CoreValues from './components/core__values/coreValues';
 import GridExample from './components/our__works/ourWork';
 import WeAreHiringContainer from './components/hiring/hiring';
+import Footer from './components/footer/footer';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <CoreValues />
       <GridExample />
       <WeAreHiringContainer />
+      <Footer />
     </div>
   );
 };

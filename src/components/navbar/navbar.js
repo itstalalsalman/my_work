@@ -1,10 +1,9 @@
 import React from "react";
 import './navbar.scss';
-import $ from "jquery";
 
 
 
-const Navbar = (props) => {
+const Navbar = ({scrollToHiring}) => {
 
     return (
         <div className="navbar__container">
@@ -17,7 +16,7 @@ const Navbar = (props) => {
                         <li>StartUps</li>
                         <li>Contact</li>
                     </ul>
-                    <button className="work__btn">Work with us!</button>
+                    <button className="work__btn" onClick={scrollToHiring}>Work with us!</button>
                 </div>
             </div>
         </div>

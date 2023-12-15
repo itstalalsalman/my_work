@@ -1,5 +1,8 @@
-import React from "react";
+import React, {useEffect, useRef} from "react";
 import './coreValues.scss';
+import $ from "jquery";
+
+
 
 const OurCoreValues = () => {
     return (
@@ -11,6 +14,8 @@ const OurCoreValues = () => {
 };
 
 const CoreValueGrid = () => {
+
+    
     return(
         <div className="core__grid">
             <div>

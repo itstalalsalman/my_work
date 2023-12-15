@@ -1,5 +1,8 @@
 import React from "react";
 import './aboutUs.scss';
+import $ from "jquery";
+
+
 
 const WhoWeAreText = () => {
     return (

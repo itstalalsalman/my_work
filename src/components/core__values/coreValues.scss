@@ -1,4 +1,6 @@
 $bgColor : #FBFAFA;
+$grid_text_color: #3D4F5C;
+$primary_orange: #FB8958;
 
 .core__values__container{
     width: 100%;
@@ -25,6 +27,7 @@ $bgColor : #FBFAFA;
 
     h1{
         font-size: 3rem;
+        color: $grid_text_color;
     }
 
     img{
@@ -53,14 +56,14 @@ $bgColor : #FBFAFA;
         
         h6{
             font-size: 2rem;
-            color: orange;
+            color: $primary_orange;
 
         }
 
         p{
             width: 50px;
             height: 1px;
-            background-color: navy;
+            background-color: $grid_text_color;
         }
 
         h5{

@@ -16,6 +16,29 @@ $(document).ready(function () {
         bottom: 0 // Slides up 20px to its final position
     }, 100);
 
+    $(".fill").animate({
+        width: "100%"
+      }, 2000, function() {
+        $(this).delay(200).animate({
+          left: "100%",
+          width: "0"
+        }, 500, function() {
+            
+          $(".text").fadeIn();
+        });
+      });
+
+    $(".btn__seeWork").on("mouseover",function () { 
+        $(".text").css("color","#46B8C8");
+        $(".fill").css("background-color","#46B8C8");
+    });
+
+    $(".btn__seeWork").on("mouseleave",function () { 
+        $(".text").css("color","white");
+        $(".fill").css("background-color","white");
+    });
+
+    
 
 });
 
@@ -27,7 +50,10 @@ const MainLoadText = ({scrollToB}) => {
             <h1 className="what__we__do">We Create Startups.</h1>
             <p>We are startup studio that develops and launches new companies.</p>
             <button className="btn__seeWork" onClick={scrollToB}>
-                <div className="see__work">See our works</div>
+                <div className="see__work">
+                    <div className="fill"></div>
+                    <div class="text">See our works</div>
+                </div>
             </button>
         </div>
     );

@@ -26,20 +26,47 @@ $primary_orange: #FB8958;
     h4{
         font-size: 3em;
     }
-    p{
+    .typewriter{
         font-size: 1.2em;
         width: 80%;
         font-weight: 500;
         color: $primary_orange;
     }
+    
+    .typewriter-text {
+        overflow: hidden; /* Hide overflowing text */
+        white-space: nowrap; /* Keep text in one line */
+        animation: typewriter 4s steps(40) forwards; /* Adjust duration and steps as needed */
+        border-right: 0.3em solid $primary_orange; /* Simulate cursor */
+        width: 0; /* Start with zero width for the typewriter effect */
+    }
 
-    img{
+    @keyframes typewriter {
+        from {
+            width: 0;
+        }
+        to {
+            width: 100%;
+            border-right: none;
+        }
+    }
+
+    img.question-mark {
         position: absolute;
         top: 15%;
         right: 5%;
+        animation: shake 0.5s infinite; /* Apply the shaking animation with infinite loop */
+    }
 
+    @keyframes shake {
+        0% { transform: rotate(0); }
+        25% { transform: rotate(-5deg); }
+        50% { transform: rotate(5deg); }
+        75% { transform: rotate(-5deg); }
+        100% { transform: rotate(0); }
     }
 }
+
 
 .what__we__do__grid{
     width: 80%;
@@ -58,29 +85,61 @@ $primary_orange: #FB8958;
         flex-direction: column;
         justify-content: center;
         align-items: flex-start;
-        gap: 5%;
+        overflow: hidden;
 
-        h6{
+        p{
+            width: 12%;
+            height: 0.05rem;
+            font-weight: lighter;
+            background-color: $grid_text_color;
+            margin-bottom: 10%;
+        }
+
+        .slide-in{
             font-size: 1.6rem;
             font-weight: 700;
             color: $primary_orange;
             height: 15%;
             width: 10%;
-            border-bottom: 1px solid $grid_text_color;
+            opacity: 0;
+            transition: opacity 0.5s, transform 0.8s;
+            transition-delay: 0.5s;
         }
 
-        h5{
+        .animate-slide{
+            opacity: 1;
+        }
+
+        .slide-in.bottom {
+            transform: translateY(100px);
+        }
+          
+        .animate-slide.bottom {
+            transform: translateY(0);
+        }
+
+
+        .slide-in-lft{
             font-size: 1.8rem;
             max-width: 75%;
             height: 60%;
             max-height: 60%;
             color: $grid_text_color;
+            opacity: 0;
+            transition: opacity 0.5s, transform 0.5s;
+            transition-delay: 0.1s;
+            transform: translateX(-100px);
+        }
+
+        .animate-slide-left {
+            opacity: 1;
+            transform: translateX(0); /* Slide in from left */
         }
 
     }
 
     > div:nth-child(3) {
-        h5{
+        .slide-in-lft{
             width: 70%;
             max-width: 70%;
             

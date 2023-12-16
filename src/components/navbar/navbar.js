@@ -1,5 +1,6 @@
 import React from "react";
 import './navbar.scss';
+import $ from "jquery";
 
 
 
@@ -13,8 +14,10 @@ const Navbar = ({scrollToHiring}) => {
                 </div>
                 <div className="navbar__text__items__btn">
                     <ul className="li__items">
-                        <li>StartUps</li>
-                        <li>Contact</li>
+                        <li>StartUps
+                        </li>
+                        <li>Contact
+                        </li>
                     </ul>
                     <button className="work__btn" onClick={scrollToHiring}>Work with us!</button>
                 </div>

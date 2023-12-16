@@ -1,9 +1,5 @@
-import React from "react";
+import React, {useState} from "react";
 import './ourWork.scss';
-
-
-
-
 
 
 const WorkHead = () => {
@@ -15,45 +11,66 @@ const WorkHead = () => {
 };
 
 const WorksGrid = () => {
-    return (
+    const [transformedDiv, setTransformedDiv] = useState(null);
+
+    const handleHover = (index) => {
+        setTransformedDiv(index);
+    };
+
+    const handleLeave = () => {
+        setTransformedDiv(null);
+    };
+
+     return (
         <div className="our__works__grid">
-            <div className="work__tolq">
+            <div className={`work work__tolq ${transformedDiv === 1 ? 'transformed' : ''}`}>
                 <h5>Tolq</h5>
                 <p>
                     Tolq is the translation solution built for e-commerce.
                     It provides all pieces of the localization puzzle in one single integrated solution.
                 </p>
-                <img src="/images/Tolq.jpg" alt="tolq"/>
-                <button>More</button>
-            </div>
-            <div className="work__feedback">
+                <img src="/images/Tolq.jpg" alt="tolq" className="grid_img"/>
+                <button className="btn__More"
+                onMouseEnter={() => handleHover(1)}
+                onMouseLeave={handleLeave}>More</button>
+                </div>
+            <div className={`work work__feedback ${transformedDiv === 2 ? 'transformed' : ''}`}>
                 <h5>Feedback Labs</h5>
                 <p>
                     Feedback Labs turns feedback into actionable insights for your team.
                 </p>
-                <img src="/images/feedback.jpg" alt="feedback"/>
-                <button>More</button>
+                <img src="/images/feedback.jpg" alt="feedback" className="grid_img"/>
+                <button className="btn__More"
+                onMouseEnter={() => handleHover(2)}
+                onMouseLeave={handleLeave}
+                >More</button>
             </div>
-            <div className="work__codekeeper">
+            <div className={`work work__tolq ${transformedDiv === 3 ? 'transformed' : ''}`}>
                 <h5>CodeKeeper</h5>
                 <p>
                     Codekeeper is an all-in-one solution for software developers and publishers to provide source code 
                     escrow as part of service level and license agreements.
                 </p>
-                <img src="/images/codekeeper.jpg" alt="codekeeper"/>
-                <button>More</button>
+                <img src="/images/codekeeper.jpg" alt="codekeeper" className="grid_img"/>
+                <button className="btn__More"
+                onMouseEnter={() => handleHover(3)}
+                onMouseLeave={handleLeave}
+                >More</button>
             </div>
-            <div className="work__legalSite">
+            <div className={`work work__tolq ${transformedDiv === 4 ? 'transformed' : ''}`}>
                 <h5>LegalSite</h5>
                 <p>
                     Protected against legal risks, privacy compliant and always up-to-date with the latest regulatory developments.
                 </p>
-                <img src="/images/legalSite.jpg" alt="legalSite"/>
-                <button>More</button>
+                <img src="/images/legalSite.jpg" alt="legalSite" className="grid_img"/>
+                <button className="btn__More"
+                onMouseEnter={() => handleHover(4)}
+                onMouseLeave={handleLeave}
+                >More</button>
             </div>
         </div>
     );
-};
+ };
 
 const WorkMoto = () => {
     return (
@@ -70,6 +87,8 @@ const WorkMoto = () => {
 
 
 const OurWorkContainer = (props) => {
+    
+
     return(
         <div className="our__work__container">
             <WorkHead />

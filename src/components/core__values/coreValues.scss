@@ -33,6 +33,15 @@ $primary_orange: #FB8958;
     img{
         margin-right: 5%;
         max-width: 8%;
+        animation: shake 0.5s infinite; /* Apply the shaking animation with infinite loop */
+    }
+
+    @keyframes shake {
+        0% { transform: rotate(0); }
+        25% { transform: rotate(-5deg); }
+        50% { transform: rotate(5deg); }
+        75% { transform: rotate(-5deg); }
+        100% { transform: rotate(0); }
     }
 
 }
@@ -54,11 +63,26 @@ $primary_orange: #FB8958;
         flex-direction: column;
         gap: 5%;
         
-        h6{
+        .slide-in-core{
             font-size: 2rem;
             color: $primary_orange;
-
+            opacity: 0;
+            transition: opacity 0.5s, transform 0.8s;
+            transition-delay: 0.5s;
         }
+
+        .animate-slide-core{
+            opacity: 1;
+        }
+
+        .slide-in-core.bottom {
+            transform: translateY(100px);
+        }
+          
+        .animate-slide-core.bottom {
+            transform: translateY(0);
+        }
+
 
         p{
             width: 50px;
@@ -66,13 +90,24 @@ $primary_orange: #FB8958;
             background-color: $grid_text_color;
         }
 
-        h5{
-            max-width: 69%;
+        .slide-in-core-lft{
+            max-width: 70%;
             line-height: 2rem;
+            opacity: 0;
+            transition: opacity 0.5s, transform 0.5s;
+            transition-delay: 0.1s;
+            transform: translateX(-100px);
+        }
+
+        .animate-slide-left-core {
+            opacity: 1;
+            transform: translateX(0); /* Slide in from left */
         }
 
         .talent{
             max-width: 38%;
+            line-height: 2rem;
+            
         }
     }
 

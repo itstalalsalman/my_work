@@ -5,9 +5,9 @@ import './virtualAssistanceCont.scss';
 const BenChat = () => {
     return (
         <div className="text__VA__container">
-            <img src="/images/ThumbLeft.png" alt="left-thumb"/>
+            <img src="/images/ThumbLeft.png" alt="left-thumb" className="thumbs"/>
             <h2>We love solving problems!</h2>
-            <img src="/images/ThumbRight.png" alt="right-thumb"/>
+            <img src="/images/ThumbRight.png" alt="right-thumb" className="thumbs"/>
             
             <div>
                 <p>X</p>

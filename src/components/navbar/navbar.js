@@ -4,7 +4,10 @@ import $ from "jquery";
 
 
 
-const Navbar = ({scrollToHiring}) => {
+const Navbar = ({scrollToHiring, scrollToForms}) => {
+    const handleClick = () => {
+        window.location.reload();
+    };
 
     return (
         <div className="navbar__container">
@@ -14,9 +17,9 @@ const Navbar = ({scrollToHiring}) => {
                 </div>
                 <div className="navbar__text__items__btn">
                     <ul className="li__items">
-                        <li>StartUps
+                        <li onClick={handleClick}>StartUps
                         </li>
-                        <li>Contact
+                        <li onClick={scrollToForms}>Contact
                         </li>
                     </ul>
                     <button className="work__btn" onClick={scrollToHiring}>Work with us!</button>

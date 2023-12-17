@@ -1,13 +1,16 @@
 import React, {useRef, useEffect } from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './App.scss';
 import AboutUs from './components/AboutUs/aboutUs';
-import MainLoad, {MainLoadText} from './components/main__load/mainLoad';
+import MainLoad from './components/main__load/mainLoad';
 import Navbar from './components/navbar/navbar';
 import SolvingProblems from './components/virtual__assistant/virtualAssistanceCont';
 import CoreValues from './components/core__values/coreValues';
 import OurWorkContainer from './components/our__works/ourWork';
+import ContactUsForm from './components/form/form';
 import WeAreHiringContainer from './components/hiring/hiring';
 import Footer from './components/footer/footer';
+
 
 function ScrollCustoms(targetPosition){
   const scrollDuration = 100;
@@ -38,10 +41,11 @@ function ScrollCustoms(targetPosition){
 function App() {
   const ourWorkRef = useRef(null);
   const hiringRef = useRef(null);
+  const formRef = useRef(null);
 
   useEffect(() => {
       console.log(ourWorkRef); // Check what's logged for the ref
-  }, [ourWorkRef, hiringRef]);
+  }, [ourWorkRef, hiringRef, formRef]);
 
   const scrollToOurWork = () => {
      // Duration in milliseconds
@@ -62,10 +66,20 @@ function App() {
 
   };
 
+  const scrollToForms = () => 
+  {
+    const targetPositionHiring = formRef.current.offsetTop;
+    if(formRef.current){
+      ScrollCustoms(targetPositionHiring);
+    }
+  };
+
+  
+
 
   return (
     <div className='App'>
-      <Navbar scrollToHiring={scrollToHiring}/>
+      <Navbar scrollToHiring={scrollToHiring} scrollToForms={scrollToForms}/>
       <MainLoad scrollToB={scrollToOurWork}/>
       <AboutUs />
       <SolvingProblems />
@@ -76,7 +90,10 @@ function App() {
       <div ref={hiringRef}>
         <WeAreHiringContainer />
       </div>
-      <Footer />
+      <div ref={formRef}>
+        <ContactUsForm />
+      </div>
+      <Footer refToEmail={scrollToForms}/>
       
     </div>
   );

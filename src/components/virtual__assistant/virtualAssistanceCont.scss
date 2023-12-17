@@ -1,5 +1,6 @@
 $chatBoxColor : #46B8C8;
 $primary_orange: #FB8958;
+$head_color: #3D4F5C;
 
 /*Fix the center of the heading along the chat box buttons so they are responsive and centered */
 
@@ -73,6 +74,7 @@ $primary_orange: #FB8958;
         display: flex;
         align-items: flex-end;
         justify-content: flex-end;
+        color: $primary_orange;
     }
 
     

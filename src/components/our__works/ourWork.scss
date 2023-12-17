@@ -1,4 +1,7 @@
+$fill_clr: #3D4F5C;
+
 .our__work__container{
+    margin: 0;
     width: 100%;
     max-width: 100%;
     display: flex;
@@ -8,11 +11,22 @@
     gap: 5vh;
     position: relative;
 
-    h1{
-        width: 80%;
+    .head{
+        margin: 0;
+        width: 40%;
         height: 25vh;
         text-align: center;
         padding-top: 8%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        position: relative;
+
+
+        .our_work_head{
+            color: $fill_clr;
+            font-size: 3rem;
+        }
     }
 
     .our__works__grid{
@@ -60,7 +74,7 @@
             }
 
             .grid_img[alt='feedback']{
-                height: 40%;
+                height: 42%;
             }
 
             &.transformed {
@@ -94,6 +108,12 @@
                         opacity: 1;
                     }
                 }
+            }
+        }
+
+        .work__codeKeeper{
+            img{
+                height: 41%;
             }
         }
     }

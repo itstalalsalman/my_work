@@ -1,10 +1,13 @@
 $bg__color:#FBFAFA;
+$primary_orange: #FB8958;
+$head_color: #3D4F5C;
+
 .we__are__hiring{
     background-color: $bg__color;
     width: 100%;
     max-width: 100%;
-    height: 50vh;
-    max-height: 50vh;
+    height: 80vh;
+    max-height: 80vh;
     display: flex;
     flex: 1 1 1;
     flex-direction: row;
@@ -18,9 +21,9 @@ $bg__color:#FBFAFA;
     }
 
     div:nth-child(1){
-        width: 18%;
+        width: 25%;
         img{
-            object-position: 15px;
+            object-position: 8px;
         }
     }
 
@@ -32,28 +35,26 @@ $bg__color:#FBFAFA;
         justify-content: center;
         flex: 1;
         align-items: center;
+        gap: 5%;
 
         h4{
             width: 100%;
             max-width: 100%;
             height: auto;
-            font-size: 3.125rem;
+            font-size: 3.2rem;
+            color: $head_color;
             text-align: center;
+            font-weight: 600;
         }
 
         p{
-            font-size: 1.25rem;
-            color: orange;
+            font-size: 1.5rem;
+            color: $primary_orange;
             font-weight: 500;
             text-align: center;
-            height: 35%;
-            width: 375px;
-            max-width: 375px;
+            width: 450px;
+            max-width: 450px;
             min-width: 300px;
-            line-height: 25px;
-            height: 35%;
-            max-height: 35%;
-            min-height: 35%;
         }
 
         button{
@@ -68,27 +69,20 @@ $bg__color:#FBFAFA;
             border-radius: 32.5px;
             font-size: 1rem;
             font-weight: bold;
+            transition: border 0.2s ease-in, background-color 0.2s ease-in, color 0.4s ease-in;
 
             &:hover{
                 background-color: white;
                 color: #46B8C8;
-                border: 1px solid #46B8C8;
-                animation: opacityInc 0.4s forwards;
+                border: 2px solid #46B8C8;
             }
 
-            @keyframes opacityInc {
-                0%{
-                    opacity: 0;
-                }
-                100%{
-                    opacity: 1;
-                }
-            }
+            
         }
     }
 
     div:nth-child(3){
-        width: 16%;
+        width: 25%;
 
     }
 

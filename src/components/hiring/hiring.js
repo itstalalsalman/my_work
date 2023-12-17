@@ -8,7 +8,7 @@ const HiringText = () => {
                 <img src="/images/hiringLeft.png" alt="exclamation"/>
             </div>
             <div>
-                <h4>We are hiring</h4>
+                <h4>We are hiring!</h4>
                 <p>
                     We're always looking for talented people to join and help build our startups.
                     Check out our current openings

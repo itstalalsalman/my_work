@@ -3,13 +3,13 @@ import './hiring.scss';
 
 const HiringText = () => {
     return (
-        <div className="we__are__hiring">
+        <div className="we__are__hiring" >
             <div>
                 <img src="/images/hiringLeft.png" alt="exclamation"/>
             </div>
             <div>
                 <h4>We are hiring!</h4>
-                <p>
+                <p className="typewriter">
                     We're always looking for talented people to join and help build our startups.
                     Check out our current openings
                 </p>
@@ -25,6 +25,7 @@ const HiringText = () => {
 
 
 const WeAreHiringContainer = (props) => {
+    
     return (
         <HiringText />   
     );

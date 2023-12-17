@@ -1,5 +1,4 @@
 import React, {useRef, useEffect } from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './App.scss';
 import AboutUs from './components/AboutUs/aboutUs';
 import MainLoad from './components/main__load/mainLoad';

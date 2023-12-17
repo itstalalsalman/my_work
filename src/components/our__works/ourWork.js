@@ -16,6 +16,7 @@ const WorkHead = () => {
 };
 
 const WorksGrid = () => {
+   
     const [transformedDiv, setTransformedDiv] = useState(null);
 
     const handleHover = (index) => {
@@ -46,7 +47,7 @@ const WorksGrid = () => {
         <div className="our__works__grid">
             <div className={`work work__tolq ${transformedDiv === 1 ? 'transformed' : ''}`}>
                 <h5 style={tolqStyle}>Tolq</h5>
-                <p>
+                <p className="grid__text">
                     Tolq is the translation solution built for e-commerce.
                     It provides all pieces of the localization puzzle in one single integrated solution.
                 </p>
@@ -58,7 +59,7 @@ const WorksGrid = () => {
                 </div>
             <div className={`work work__feedback ${transformedDiv === 2 ? 'transformed' : ''}`}>
                 <h5 style={feedbackClr}>Feedback Labs</h5>
-                <p>
+                <p className="grid__text">
                     Feedback Labs turns feedback into actionable insights for your team.
                 </p>
                 <img src="/images/feedback.jpg" alt="feedback" className="grid_img"/>
@@ -69,7 +70,7 @@ const WorksGrid = () => {
             </div>
             <div className={`work work__codeKeeper ${transformedDiv === 3 ? 'transformed' : ''}`}>
                 <h5 style={codeKeeperClr}>CodeKeeper</h5>
-                <p>
+                <p className="grid__text">
                     Codekeeper is an all-in-one solution for software developers and publishers to provide source code 
                     escrow as part of service level and license agreements.
                 </p>
@@ -82,7 +83,7 @@ const WorksGrid = () => {
             </div>
             <div className={`work work__legalSite ${transformedDiv === 4 ? 'transformed' : ''}`}>
                 <h5 style={legalClr}>LegalSite</h5>
-                <p>
+                <p className="grid__text">
                     Protected against legal risks, privacy compliant and always up-to-date with the latest regulatory developments.
                 </p>
                 <img src="/images/legalSite.jpg" alt="legalSite" className="grid_img"/>

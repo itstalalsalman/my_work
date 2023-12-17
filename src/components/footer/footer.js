@@ -12,7 +12,7 @@ const Footer = ({refToEmail}) => {
                 <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5">
                     <div class="col mb-3 mr-5">
                         <a href="/" class="d-flex align-items-center mb-3 link-dark text-decoration-none">
-                            <img class="bi me-2" width="150" height="40" alt="" src="/images/Group_15.png"/>
+                            <img class="bi me-2" width="175" height="45" alt="" src="/images/Group_15.png"/>
                         </a>
                         <p class="pt-30 text-muted pt-5">© 2020 Startupz.</p>
                         <p class="text-muted">All rights reserved.</p>

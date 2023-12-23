@@ -25,12 +25,14 @@ $primary_orange: #FB8958;
     
     h4{
         font-size: 3em;
+        font-weight: 600;
+        color: $grid_text_color;
     }
     
     .typewriter{
         font-size: 1.2em;
         width: 80%;
-        font-weight: 500;
+        font-weight: 550;
         color: $primary_orange;
     }
     
@@ -130,6 +132,7 @@ $primary_orange: #FB8958;
             transition: opacity 0.5s, transform 0.5s;
             transition-delay: 0.1s;
             transform: translateX(-100px);
+            font-weight: 550;
         }
 
         .animate-slide-left {

@@ -8,7 +8,8 @@ $(document).ready(function () {
        
     $("p").animate({
         opacity: 1,
-        bottom: 0 // Slides up 20px to its final position
+        bottom: 0,
+        'font-weight': 550 // Slides up 20px to its final position
       }, 1800);
 
     $(".img__main__cont").animate({
